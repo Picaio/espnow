@@ -1,29 +1,19 @@
-# 📡 Comunicación ESP32-ESPNOW
+# 📡 Comunicación ESP-NOW en ESP32: Emisor y Receptor
 
-Este repositorio contiene un proyecto que demuestra la comunicación punto a punto (P2P) utilizando **ESPNOW** en la plataforma de microcontroladores **ESP32**. ESPNOW es un protocolo de comunicación inalámbrica que permite la comunicación sin conexión y de baja latencia entre dispositivos ESP32, ideal para el intercambio rápido de datos y redes de sensores remotos.
+Este repositorio contiene un proyecto que muestra cómo configurar y programar **ESP-NOW** en ESP32 para la comunicación sin conexión Wi-Fi. En este ejemplo práctico, un dispositivo actúa como **emisor**, enviando valores de su pin analógico, mientras que otro dispositivo como **receptor** controla la luminosidad de un LED en función de los datos recibidos.
 
 ## ✨ Características:
-- 🔋 **Bajo Consumo de Energía**: Uso eficiente de energía mediante el protocolo ESPNOW, adecuado para dispositivos alimentados por baterías.
-- 🔗 **Comunicación Uno a Uno y Uno a Muchos**: Soporta tanto la comunicación directa entre dispositivos como la comunicación multicast a varios dispositivos simultáneamente.
-- 🚀 **Transmisión de Datos Simple y Rápida**: Permite la transmisión de pequeños paquetes (hasta 250 bytes) sin necesidad de una conexión Wi-Fi.
-- ⏱️ **Comunicación en Tiempo Real**: Proporciona comunicación de baja latencia, ideal para aplicaciones que requieren rendimiento casi en tiempo real.
+- **Protocolo ESP-NOW**: Comunicación sin Wi-Fi, de baja latencia entre dispositivos ESP32.
+- **Transmisión de Datos**: El emisor envía valores leídos del pin analógico.
+- **Control de LED**: El receptor ajusta la intensidad del LED usando `digitalWrite()` basado en los valores recibidos.
 
-## 💡 Casos de Uso:
-- 🌐 Sensores remotos en aplicaciones IoT
-- 🎛️ Sistemas de control en tiempo real
-- 🕸️ Redes en malla para sensores de bajo consumo
+## 🛠️ Instrucciones:
+1. Configura ambos ESP32 (emisor y receptor).
+2. Programa el emisor para leer datos del pin analógico y enviar los datos mediante ESP-NOW.
+3. Programa el receptor para recibir los datos y ajustar el brillo del LED.
 
-## 🛠️ Instrucciones de Configuración:
-1. Clona el repositorio en tu máquina local.
-2. Instala el entorno de desarrollo del ESP32 en tu IDE preferido (Arduino IDE, PlatformIO, etc.).
-3. Carga el código en un dispositivo ESP32.
-4. Configura nodos adicionales según sea necesario para establecer la comunicación P2P o multicast.
-
-## 📝 Código de Ejemplo:
-El proyecto incluye ejemplos para los dispositivos tanto **transmisores** como **receptores**, mostrando diferentes modos de comunicación ESPNOW:
-- 📤 **Modo Emisor**: El dispositivo envía mensajes periódicos a una lista predefinida de pares.
-- 📥 **Modo Receptor**: El dispositivo escucha mensajes entrantes de uno o más emisores.
-
----
+## 📝 Ejemplos:
+- 📤 **Emisor**: Lee datos del pin analógico y los envía.
+- 📥 **Receptor**: Recibe datos y ajusta el brillo del LED.
 
 Happy coding! 😎
